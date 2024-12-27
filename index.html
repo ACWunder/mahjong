@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Mahjong Score Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Mahjong Score Tracker</h1>
+
+    <form id="scoreForm">
+        <h2>Spielernamen</h2>
+        <div>
+            <input type="text" id="playerName1" placeholder="Spieler 1" value="Spieler 1">
+            <input type="text" id="playerName2" placeholder="Spieler 2" value="Spieler 2">
+            <input type="text" id="playerName3" placeholder="Spieler 3" value="Spieler 3">
+            <input type="text" id="playerName4" placeholder="Spieler 4" value="Spieler 4">
+        </div>
+
+        <h2>Rundenwind</h2>
+        <select id="roundWind">
+            <option value="Ost">Ost</option>
+            <option value="Süd">Süd</option>
+            <option value="West">West</option>
+            <option value="Nord">Nord</option>
+        </select>
+
+        <h2>Punkteingabe</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Punkte</th>
+                    <th>Wind</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="score1" value="0"></td>
+                    <td>
+                        <select id="wind1">
+                            <option value="Ost">Ost</option>
+                            <option value="Süd">Süd</option>
+                            <option value="West">West</option>
+                            <option value="Nord">Nord</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="score2" value="0"></td>
+                    <td>
+                        <select id="wind2">
+                            <option value="Ost">Ost</option>
+                            <option value="Süd">Süd</option>
+                            <option value="West">West</option>
+                            <option value="Nord">Nord</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="score3" value="0"></td>
+                    <td>
+                        <select id="wind3">
+                            <option value="Ost">Ost</option>
+                            <option value="Süd">Süd</option>
+                            <option value="West">West</option>
+                            <option value="Nord">Nord</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="score4" value="0"></td>
+                    <td>
+                        <select id="wind4">
+                            <option value="Ost">Ost</option>
+                            <option value="Süd">Süd</option>
+                            <option value="West">West</option>
+                            <option value="Nord">Nord</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="calculateButton">Punkte berechnen</button>
+    </form>
+
+    <h2>Gesamttabelle</h2>
+    <table id="resultsTable">
+        <thead>
+            <tr id="playerHeaders">
+                <th>Runde</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+        </tbody>
+    </table>
+
+    <script src="lib/app.js"></script>
+</body>
+</html>
