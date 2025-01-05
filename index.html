@@ -11,91 +11,149 @@
 <body>
     <h1>Mahjong Score Tracker</h1>
 
-    <form id="scoreForm">
-        <h2>Spielernamen</h2>
-        <div>
-            <input type="text" id="playerName1" placeholder="Spieler 1" value="Spieler 1">
-            <input type="text" id="playerName2" placeholder="Spieler 2" value="Spieler 2">
-            <input type="text" id="playerName3" placeholder="Spieler 3" value="Spieler 3">
-            <input type="text" id="playerName4" placeholder="Spieler 4" value="Spieler 4">
-        </div>
+    <div class="main-container">
+        <!-- Linke Seite: Spielerübersicht -->
+        <section id="leftSection">
+            <h2>Spieleranzahl</h2>
+            <div>
+                <label for="playerCount">Anzahl der Spieler:</label>
+                <select id="playerCount">
+                    <option value="4">4 Spieler</option>
+                    <option value="5">5 Spieler</option>
+                    <option value="6">6 Spieler</option>
+                </select>
+            </div>
 
-        <h2>Rundenwind</h2>
-        <select id="roundWind">
-            <option value="Ost">Ost</option>
-            <option value="Süd">Süd</option>
-            <option value="West">West</option>
-            <option value="Nord">Nord</option>
-        </select>
+            <h2>Spieleraktivierung</h2>
+            <div id="playerInputs">
+                <div>
+                    <input type="checkbox" id="playerCheckbox1" checked>
+                    <input type="text" id="playerName1" placeholder="Spieler 1" value="Spieler 1">
+                </div>
+                <div>
+                    <input type="checkbox" id="playerCheckbox2" checked>
+                    <input type="text" id="playerName2" placeholder="Spieler 2" value="Spieler 2">
+                </div>
+                <div>
+                    <input type="checkbox" id="playerCheckbox3" checked>
+                    <input type="text" id="playerName3" placeholder="Spieler 3" value="Spieler 3">
+                </div>
+                <div>
+                    <input type="checkbox" id="playerCheckbox4" checked>
+                    <input type="text" id="playerName4" placeholder="Spieler 4" value="Spieler 4">
+                </div>
+                <div>
+                    <input type="checkbox" id="playerCheckbox5">
+                    <input type="text" id="playerName5" placeholder="Spieler 5" value="Spieler 5">
+                </div>
+                <div>
+                    <input type="checkbox" id="playerCheckbox6">
+                    <input type="text" id="playerName6" placeholder="Spieler 6" value="Spieler 6">
+                </div>
+            </div>
 
-        <h2>Punkteingabe</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Punkte</th>
-                    <th>Wind</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="number" id="score1" value="0"></td>
-                    <td>
-                        <select id="wind1">
-                            <option value="Ost">Ost</option>
-                            <option value="Süd">Süd</option>
-                            <option value="West">West</option>
-                            <option value="Nord">Nord</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="score2" value="0"></td>
-                    <td>
-                        <select id="wind2">
-                            <option value="Ost">Ost</option>
-                            <option value="Süd">Süd</option>
-                            <option value="West">West</option>
-                            <option value="Nord">Nord</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="score3" value="0"></td>
-                    <td>
-                        <select id="wind3">
-                            <option value="Ost">Ost</option>
-                            <option value="Süd">Süd</option>
-                            <option value="West">West</option>
-                            <option value="Nord">Nord</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="score4" value="0"></td>
-                    <td>
-                        <select id="wind4">
-                            <option value="Ost">Ost</option>
-                            <option value="Süd">Süd</option>
-                            <option value="West">West</option>
-                            <option value="Nord">Nord</option>
-                        </select>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <button type="button" id="calculateButton">Punkte berechnen</button>
-    </form>
+            <h2>Gesamtpunkte</h2>
+            <table id="scoreSummary">
+                <thead>
+                    <tr id="playerHeaders">
+                        <!-- Spielerüberschriften werden hier dynamisch eingefügt -->
+                    </tr>
+                </thead>
+                <tbody id="summaryBody">
+                    <!-- Dynamische Punkteanzeige -->
+                </tbody>
+            </table>
 
-    <h2>Gesamttabelle</h2>
-    <table id="resultsTable">
-        <thead>
-            <tr id="playerHeaders">
-                <th>Runde</th>
-            </tr>
-        </thead>
-        <tbody id="resultsBody">
-        </tbody>
-    </table>
+        </section>
+
+        <!-- Rechte Seite: Punkteingabe -->
+        <section id="rightSection">
+        
+            <h2>Mahjong-Rufer</h2>
+            <select id="mahjongPlayer">
+                <!-- Optionen werden dynamisch hinzugefügt -->
+            </select>
+        
+            <h2>Punkteingabe</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Punkte</th>
+                        <th>Wind</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" id="score1" value="0"></td>
+                        <td>
+                            <select id="wind1">
+                                <option value="Ost">Ost</option>
+                                <option value="Süd">Süd</option>
+                                <option value="West">West</option>
+                                <option value="Nord">Nord</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="score2" value="0"></td>
+                        <td>
+                            <select id="wind2">
+                                <option value="Ost">Ost</option>
+                                <option value="Süd">Süd</option>
+                                <option value="West">West</option>
+                                <option value="Nord">Nord</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="score3" value="0"></td>
+                        <td>
+                            <select id="wind3">
+                                <option value="Ost">Ost</option>
+                                <option value="Süd">Süd</option>
+                                <option value="West">West</option>
+                                <option value="Nord">Nord</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="score4" value="0"></td>
+                        <td>
+                            <select id="wind4">
+                                <option value="Ost">Ost</option>
+                                <option value="Süd">Süd</option>
+                                <option value="West">West</option>
+                                <option value="Nord">Nord</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="score5" value="0"></td>
+                        <td>
+                            <select id="wind5">
+                                <option value="Ost">Ost</option>
+                                <option value="Süd">Süd</option>
+                                <option value="West">West</option>
+                                <option value="Nord">Nord</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="score6" value="0"></td>
+                        <td>
+                            <select id="wind6">
+                                <option value="Ost">Ost</option>
+                                <option value="Süd">Süd</option>
+                                <option value="West">West</option>
+                                <option value="Nord">Nord</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" id="calculateButton">Punkte berechnen</button>
+        </section>
+    </div>
 
     <script src="lib/app.js"></script>
 </body>
