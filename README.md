@@ -1,18 +1,37 @@
-## Getting Started
+# Mahjong Calculator 🀄️
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to the **Mahjong Calculator** – a small yet handy tool I created for my Mahjong-loving aunts! 🎉
 
-## Folder Structure
+## 🌟 About the Project
 
-The workspace contains two folders by default, where:
+My aunts are passionate Mahjong players, but keeping track of points can sometimes get tricky (especially after long games!). To make their game nights more enjoyable, I built this simple, browser-based calculator to handle the math for them.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+You can try it out here:  
+👉 [Mahjong Calculator](https://mahjong-rechner.netlify.app/)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## ✨ Features
 
-## Dependency Management
+- **Easy to Use:** Intuitive design for quick point calculations.  
+- **Browser-Based:** Works on any device with internet access – no installation needed.  
+- **Fast and Reliable:** No more debates over who forgot to count what!  
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** React  
+- **Hosting:** Netlify  
+
+---
+
+## 🎯 Future Plans
+
+- Support for different Mahjong rule variations.  
+- Multi-language support.  
+- Dark mode for late-night games. 🕯️  
+
+---
+
+Enjoy your Mahjong games, and let this tool make your point calculations effortless! 🀄️
